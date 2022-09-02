@@ -1,0 +1,10 @@
+who: To whom it may concern
+pitch: I've always been passionate about not starving to death!
+skills:
+  a:      always been closing
+  b:      barely never got fired
+  c:      constantly improving
+  # you can also have fully named skills
+  ui:     building websites
+  eng:    software engineering
+  robots: hardware engineering  
