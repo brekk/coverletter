@@ -53,7 +53,8 @@ export const getFullAlias = curry((yc, k) =>
 // getAlias :: YargsConfig -> String -> String
 export const getAlias = curry((yc, k) => pipe(getFullAlias(yc), head)(k))
 
-export const verifyConfig = curry((yc, conf) => {
+// findInvalidConfig
+export const findInvalidConfigWithContext = curry((yc, conf) => {
   console.log({ yc, conf })
   return pipe(
     getAliasPairs,

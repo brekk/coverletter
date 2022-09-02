@@ -1,50 +1,37 @@
 import pkg from '../package.json'
 const { name: PKG_NAME } = pkg
 
-export const INITIAL_STATE = {
-  total: {
-    lines: 0,
-    files: 0,
-  },
-  duplicate: {
-    lines: 0,
-    files: 0,
-    blocks: 0,
-    inFile: 0,
-  },
-}
-
 // .coverletterrc
 //
 // pitch: string
-// skills: [string]
-// specificSkills: [string]
+// allSkills: {key: value}
+// skill: [key]
 // who: string
 // where: string
 
 export const HELP_STRINGS = {
+  allSkills: `What are you good at? Everything you can think of!`,
+  company: `What company are you applying to?`,
   debug: `Enable debug logging. Equivalent to \`DEBUG="${PKG_NAME}:*" ${PKG_NAME}\``,
   help: 'This help text',
   init: `Initialize ${PKG_NAME} in this codebase`,
   pitch: `What's your personal sales pitch?`,
-  skills: `What are you good at? Everything you can think of!`,
-  specificSkills: `What are you good at for this specific job?`,
-  where: `What company are you applying to?`,
+  skill: `What are you good at for this specific job?`,
   who: `Who are you speaking to for this job position?`,
 }
 
 export const yargsConfig = {
   alias: {
+    allSkills: ['a'],
+    company: ['c'],
     debug: ['d'],
     help: ['h'],
     init: ['n'],
     pitch: ['p'],
-    skills: ['s'],
-    specificSkills: ['k'],
-    where: ['c'],
+    skill: ['s'],
     who: ['w'],
   },
-  array: ['s', 'k'],
+  array: ['a', 's'],
   boolean: ['h', 'd', 'n'],
 }
 
